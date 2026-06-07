@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Scene | Portfolio Kỹ thuật </title>
+  <title>Main Scene | Portfolio Kỹ thuật số</title>
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("portfolio-theme") === "dark") {
+          document.documentElement.classList.add("theme-dark");
+        }
+      } catch (error) {}
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-main">
@@ -15,6 +24,9 @@
         <a href="projects.html">Dự án</a>
         <a href="conclusion.html">Tổng kết</a>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Chuyển giao diện" title="Chuyển giao diện">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
     </div>
   </nav>
 
@@ -24,26 +36,35 @@
         <p class="eyebrow">Giới thiệu</p>
         <h1>Portfolio</h1>
         <p class="lead">
-          Đây là không gian tổng hợp các bài tập, sản phẩm và kết quả học tập trong môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo. <br><br>
-          Mục đích của portfolio này là trình bày quá trình học, cách tôi thực hiện từng nhiệm vụ và những kỹ năng đã được phát triển. Thay vì chỉ liệt kê bài tập đã hoàn thành, trang này tập trung vào việc cho thấy quy trình làm việc, cách tôi tìm hiểu vấn đề, sử dụng công cụ số và AI để hỗ trợ học tập, cũng như cách tôi đánh giá và cải thiện kết quả sau mỗi bài. 
+          Đây là không gian tổng hợp các bài tập, sản phẩm và kết quả học tập trong môn Nhập môn
+          Công nghệ số và Ứng dụng Trí tuệ nhân tạo.
           <br><br>
-          Portfolio đồng thời là nơi lưu trữ các minh chứng quan trọng để người xem có thể theo dõi được sự tiến bộ, tính liên tục trong học tập và định hướng phát triển của tôi trong thời gian tiếp theo.
+          Mục đích của portfolio này là trình bày quá trình học, cách tôi thực hiện từng nhiệm vụ
+          và những kỹ năng đã được phát triển. Thay vì chỉ liệt kê bài tập đã hoàn thành, trang này
+          tập trung vào việc cho thấy quy trình làm việc, cách tôi tìm hiểu vấn đề, sử dụng công cụ
+          số và AI để hỗ trợ học tập, cũng như cách tôi đánh giá và cải thiện kết quả sau mỗi bài.
+          <br><br>
+          Portfolio đồng thời là nơi lưu trữ các minh chứng quan trọng để người xem có thể theo dõi
+          được sự tiến bộ, tính liên tục trong học tập và định hướng phát triển của tôi trong thời gian tiếp theo.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="projects.html">Đi đến Dự án</a>
-          <a class="button secondary" href="conclusion.html">Đi đến Tổng kết</a>
+          <a class="button primary" href="projects.html">Đi đến dự án</a>
+          <a class="button secondary" href="conclusion.html">Đi đến tổng kết</a>
         </div>
       </div>
+
       <aside class="profile-card">
         <div class="avatar avatar-link">
-          <img src="profile.jpg" alt="Profile picture">
+          <img src="profile.png" alt="Profile picture">
         </div>
         <div class="profile-meta">
           <h2>Thông tin cá nhân</h2>
           <ul>
             <li><span>Họ và tên</span><strong>Phạm Quang Minh</strong></li>
-            <li><span>Ngành học</span><strong>Khoa học máy tính</strong></li>
-            <li><span>Email</span><strong>minh20071412@email.com</strong></li>
+            <li><span>Ngành học</span><strong>Khoa học máy tính - CNTT</strong></li>
+            <li><span>Mã học phần</span><strong>VNU1001_E252012</strong></li>
+            <li><span>Trường</span><strong>Đại học Công nghệ - VNU</strong></li>
+            <li><span>Email</span><strong>25021885@vnu.edu.vn</strong></li>
           </ul>
         </div>
       </aside>
@@ -61,13 +82,18 @@
           <article class="panel">
             <h3>Về bản thân</h3>
             <p>
-              Tôi là sinh viên K70I-CS6 ngành Khoa học máy tính tại Trường Đại học Công nghệ (UET), Đại học Quốc gia Hà Nội, quan tâm đến công nghệ số, trí tuệ nhân tạo và cách biến các bài tập thành một bộ hồ sơ học tập có cấu trúc rõ ràng.
+              Tôi là sinh viên K70I-CS6 ngành Khoa học máy tính tại Trường Đại học Công nghệ (UET),
+              Đại học Quốc gia Hà Nội, quan tâm đến công nghệ số, trí tuệ nhân tạo và cách biến các
+              bài tập thành một bộ hồ sơ học tập có cấu trúc rõ ràng.
             </p>
           </article>
           <article class="panel">
             <h3>Mục tiêu học tập</h3>
             <p>
-              Tôi muốn rèn luyện kỹ năng tìm kiếm thông tin, viết prompt, hợp tác trong môi trường số và xây dựng các sản phẩm có thể trình bày lại một cách mạch lạc. Bên cạnh đó, tôi mong muốn nâng cao khả năng sử dụng các công cụ công nghệ và trí tuệ nhân tạo để hỗ trợ học tập, phát triển tư duy phản biện, kỹ năng giải quyết vấn đề và khả năng tự học. 
+              Tôi muốn rèn luyện kỹ năng tìm kiếm thông tin, viết prompt, hợp tác trong môi trường số
+              và xây dựng các sản phẩm có thể trình bày lại một cách mạch lạc. Bên cạnh đó, tôi mong
+              muốn nâng cao khả năng sử dụng các công cụ công nghệ và trí tuệ nhân tạo để hỗ trợ học tập,
+              phát triển tư duy phản biện, kỹ năng giải quyết vấn đề và khả năng tự học.
             </p>
           </article>
         </div>
@@ -86,8 +112,8 @@
             <div class="tag-list">
               <span>Tìm kiếm thông tin</span>
               <span>Đánh giá nguồn thông tin</span>
-              <span>Viết prompt prompt</span>
-              <span>Hợp tác trực tuyếnn</span>
+              <span>Viết prompt</span>
+              <span>Hợp tác trực tuyến</span>
               <span>Sáng tạo nội dung số</span>
               <span>Code</span>
             </div>
@@ -95,12 +121,15 @@
           <article class="panel">
             <h3>Định hướng phát triển</h3>
             <p>
-              Trong giai đoạn tiếp theo, tôi muốn nâng cao kỹ năng trình bày dự án, bổ sung thêm minh chứng thực tế cho các bài tập và tiếp tục sử dụng AI một cách có trách nhiệm, hiệu quả trong học tập.
+              Trong giai đoạn tiếp theo, tôi muốn nâng cao kỹ năng trình bày dự án, bổ sung thêm minh chứng
+              thực tế cho các bài tập và tiếp tục sử dụng AI một cách có trách nhiệm, hiệu quả trong học tập.
             </p>
           </article>
         </div>
       </div>
     </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Scene | Portfolio Ky Thuat So</title>
+  <title>Project Scene | Portfolio Kỹ thuật số</title>
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("portfolio-theme") === "dark") {
+          document.documentElement.classList.add("theme-dark");
+        }
+      } catch (error) {}
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-projects">
@@ -15,6 +24,9 @@
         <a class="active" href="projects.html">Dự án</a>
         <a href="conclusion.html">Tổng kết</a>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Chuyển giao diện" title="Chuyển giao diện">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
     </div>
   </nav>
 
@@ -23,7 +35,9 @@
       <p class="eyebrow">Dự án</p>
       <h1>Danh sách bài tập và sản phẩm</h1>
       <p class="lead narrow">
-        Mỗi bài tập bên dưới gồm mục tiêu, quá trình thực hiện và vị trí để bạn gắn liên kết sản phẩm.
+        Trang này tổng hợp các bài tập đã thực hiện trong học phần Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo. 
+        <br><br>
+        Mỗi bài tập được trình bày kèm theo mục tiêu, quá trình thực hiện, kết quả đạt được và các minh chứng liên quan, qua đó thể hiện quá trình học tập và ứng dụng công nghệ số, AI vào các nhiệm vụ thực tiễn.
       </p>
     </div>
   </header>
@@ -99,5 +113,7 @@
       </div>
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
